@@ -18,9 +18,12 @@
   },
   "homepage": "https://github.com/lirantal/fastify-supertokens-example#readme",
   "dependencies": {
+    "@fastify/cors": "^8.2.0",
     "@fastify/env": "^4.2.0",
+    "@fastify/formbody": "^7.4.0",
     "fastify": "^4.10.2",
-    "fastify-plugin": "^4.4.0"
+    "fastify-plugin": "^4.4.0",
+    "supertokens-node": "^12.1.4"
   },
   "private": true
 }

@@ -10,6 +10,42 @@ async function configPlugin(server, options, done) {
         type: "number",
         default: 3001,
       },
+      SUPERTOKENS_CONNECTION_URI: {
+        type: "string",
+      },
+      SUPERTOKENS_API_KEY: {
+        type: "string",
+      },
+      SUPERTOKENS_APPNAME: {
+        type: "string",
+      },
+      SUPERTOKENS_API_DOMAIN: {
+        type: "string",
+      },
+      SUPERTOKENS_API_BASE_PATH: {
+        type: "string",
+      },
+      SUPERTOKENS_WEBSITE_DOMAIN: {
+        type: "string",
+      },
+      SUPERTOKENS_WEBSITE_BASE_PATH: {
+        type: "string",
+      },
+      SUPERTOKENS_3RD_PARTY_GOOGLE_CLIENT_ID: {
+        type: "string",
+      },
+      SUPERTOKENS_3RD_PARTY_GOOGLE_CLIENT_SECRET: {
+        type: "string",
+      },
+      SUPERTOKENS_3RD_PARTY_GITHUB_CLIENT_ID: {
+        type: "string",
+      },
+      SUPERTOKENS_3RD_PARTY_GITHUB_CLIENT_SECRET: {
+        type: "string",
+      },
+      CORS_ORIGIN_URL: {
+        type: "string",
+      },
     },
   };
 
