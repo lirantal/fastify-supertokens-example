@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/lirantal/fastify-supertokens-example#readme",
   "dependencies": {
+    "@fastify/env": "^4.2.0",
     "fastify": "^4.10.2",
     "fastify-plugin": "^4.4.0"
   },
