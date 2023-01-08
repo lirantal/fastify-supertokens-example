@@ -4,6 +4,8 @@
   "description": "A Fastify example codebase for using supertokens",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
+    "start:debug": "DEBUG=com.supertokens* node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

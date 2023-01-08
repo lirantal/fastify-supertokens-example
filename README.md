@@ -50,6 +50,18 @@ SUPERTOKENS_API_DOMAIN="http://localhost:3001"
 SUPERTOKENS_API_BASE_PATH="/auth"
 ```
 
+## Debugging
+
+If you want to debug the SuperTokens part of the code, which is
+mostly what makes up this backend authentication service, it is
+useful to start the server with the relevant symbols for `DEBUG=`.
+
+There's already a run-script for that for your convenience:
+
+```bash
+npm run start:debug
+```
+
 # Author
 
 Liran Tal <liran.tal@gmail.com>
