@@ -8,6 +8,7 @@
     "start:debug": "DEBUG=com.supertokens* node server.js",
     "docker:build": "docker build -t fastify-supertokens-example .",
     "docker:run": "npm run docker:build && docker run --rm -p 3001:3001 --name fastify-supertokens-example fastify-supertokens-example ",
+    "docker:sh": "docker exec -it fastify-supertokens-example /bin/sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
