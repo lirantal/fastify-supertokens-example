@@ -62,6 +62,26 @@ There's already a run-script for that for your convenience:
 npm run start:debug
 ```
 
+## How to run the project with Docker
+
+### Build the Docker image
+
+This project provides a production-grade `Dockerfile` for you to use.
+
+To build the Docker image, run the following command:
+
+```bash
+docker build -t fastify-supertokens-example .
+```
+
+### Run the Docker image
+
+To run the Docker image, run the following command:
+
+```bash
+docker run --rm -p 3001:3001 fastify-supertokens-example
+```
+
 # Author
 
 Liran Tal <liran.tal@gmail.com>

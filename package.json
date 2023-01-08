@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "start:debug": "DEBUG=com.supertokens* node server.js",
+    "docker:build": "docker build -t fastify-supertokens-example .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
