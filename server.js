@@ -6,7 +6,10 @@ async function initAppServer() {
 
   // Start the server
   try {
-    await app.listen({ port: app.config.HTTP_PORT });
+    await app.listen({
+      port: app.config.HTTP_PORT,
+      host: app.config.HTTP_HOST,
+    });
   } catch (err) {
     app.log.error(err);
     process.exit(1);

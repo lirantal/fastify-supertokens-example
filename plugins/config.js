@@ -24,6 +24,10 @@ async function configPlugin(server, options, done) {
         type: "number",
         default: 3001,
       },
+      HTTP_HOST: {
+        type: "string",
+        default: "0.0.0.0",
+      },
       SUPERTOKENS_CONNECTION_URI: {
         type: "string",
       },
