@@ -42,7 +42,7 @@ CORS_ORIGIN_URL="http://localhost:3000"
 The above means that the frontend is served at `http://localhost:3000` and the authentication pages such as the login, and sign up forms
 are available at `http://localhost:3000/auth`.
 
-For the backend, *this repository*, which servers as the authentication API, the base path is `/auth` and the domain is `http://localhost:3000`,
+For the backend, *this repository*, which servers as the authentication API, the base path is `/auth` and the domain is `http://localhost:3001`,
 as is specified in the following environment variables:
 
 ```
