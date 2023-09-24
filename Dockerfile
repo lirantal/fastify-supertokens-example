@@ -13,4 +13,4 @@ USER node
 WORKDIR /usr/src/app
 COPY --chown=node:node --from=build /usr/src/app/node_modules /usr/src/app/node_modules
 COPY --chown=node:node . /usr/src/app
-CMD ["dumb-init", "ts-node", "--esm", "--project", "./tsconfig.json", "server"]
+CMD [ "npx", "ts-node", "--esm", "--project", "./tsconfig.json", "server.ts" ]
