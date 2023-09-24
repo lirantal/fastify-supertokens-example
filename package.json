@@ -2,10 +2,10 @@
   "name": "fastify-supertokens-example",
   "version": "1.0.0",
   "description": "A Fastify example codebase for using supertokens",
-  "main": "server.js",
+  "main": "server.ts",
   "scripts": {
-    "start": "node server.js",
-    "start:debug": "DEBUG=com.supertokens* node server.js",
+    "start": "npx ts-node --esm --project ./tsconfig.json server",
+    "start:debug": "DEBUG=com.supertokens* npx ts-node --esm server",
     "docker:build": "docker build -t fastify-supertokens-example .",
     "docker:run": "npm run docker:build && docker run --rm -p 3001:3001 --name fastify-supertokens-example fastify-supertokens-example ",
     "docker:sh": "docker exec -it fastify-supertokens-example /bin/sh",
@@ -23,12 +23,17 @@
   },
   "homepage": "https://github.com/lirantal/fastify-supertokens-example#readme",
   "dependencies": {
-    "@fastify/cors": "^8.2.0",
+    "@fastify/cors": "^8.4.0",
     "@fastify/env": "^4.2.0",
     "@fastify/formbody": "^7.4.0",
-    "fastify": "^4.10.2",
-    "fastify-plugin": "^4.4.0",
-    "supertokens-node": "^12.1.4"
+    "fastify": "^4.23.2",
+    "fastify-plugin": "^4.5.1",
+    "supertokens-node": "latest",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.38"
   },
   "private": true
 }
