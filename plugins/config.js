@@ -1,7 +1,7 @@
 import fastifyEnv from "@fastify/env";
 import fastifyPlugin from "fastify-plugin";
 
-async function configPlugin(server, options, done) {
+function configPlugin(server, options, done) {
   const schema = {
     type: "object",
     required: [
