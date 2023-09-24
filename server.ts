@@ -6,8 +6,11 @@ async function initAppServer() {
 
   // Start the server
   try {
-    await app.listen({
+
+      await app.listen({
+      // @ts-ignore
       port: app.config.HTTP_PORT,
+      // @ts-ignore
       host: app.config.HTTP_HOST,
     });
   } catch (err) {
