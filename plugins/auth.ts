@@ -48,6 +48,7 @@ async function auth(server, options) {
       Session.init(), // initializes session features
     ],
   });
+  server.register(helmet, { contentSecurityPolicy: false })
 
   // we register a CORS route to allow requests from the frontend
   server.register(cors, {
