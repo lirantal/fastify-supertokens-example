@@ -11,6 +11,7 @@ ENV NODE_ENV production
 COPY --from=build /usr/bin/dumb-init /usr/bin/dumb-init
 USER node
 WORKDIR /usr/src/app
-COPY --chown=node:node --from=build /usr/src/app/node_modules /usr/src/app/node_modules
 COPY --chown=node:node . /usr/src/app
-CMD [ "npx", "ts-node", "--esm", "--project", "./tsconfig.json", "server.ts" ]
+COPY --chown=node:node --from=build /usr/src/app/node_modules /usr/src/app/node_modules
+CMD [ "npx", "nodemon", "-e", "ts", "-x", "npm", "run", "watch:serve" ]
+

@@ -4,10 +4,12 @@
   "description": "A Fastify example codebase for using supertokens",
   "main": "server.ts",
   "scripts": {
-    "start": "npx ts-node --esm --project ./tsconfig.json server.ts",
-    "start:debug": "DEBUG=com.supertokens* npx ts-node --esm server.ts",
+    "start": "nodemon -e ts -x npm run watch:serve",
+    "watch:serve": "npx ts-node --esm --project ./tsconfig.json server.ts",
+    "start:debug": "DEBUG=com.supertokens* npm run start",
     "docker:build": "docker build -t fastify-supertokens-example .",
     "docker:run": "npm run docker:build && docker run --rm -p 3001:3001 --name fastify-supertokens-example fastify-supertokens-example ",
+    "docker:stop": "docker stop fastify-supertokens-example ",
     "docker:sh": "docker exec -it fastify-supertokens-example /bin/sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -29,9 +31,9 @@
     "@fastify/helmet": "^11.1.1",
     "fastify": "^4.23.2",
     "fastify-plugin": "^4.5.1",
-    "supertokens-node": "latest",
-    "ts-node-dev": "^2.0.0",
-    "typescript": "^5.2.2"
+    "nodemon": "^3.0.1",
+    "supertokens-node": "^15.2.1",
+    "ts-node": "^10.9.1"
   },
   "devDependencies": {
     "@types/node": "^16.11.38"
