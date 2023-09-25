@@ -6,6 +6,7 @@ import supertokens from "supertokens-node";
 import Session from "supertokens-node/recipe/session/index.js";
 import EmailPassword from "supertokens-node/recipe/emailpassword/index.js";
 import ThirdPartyEmailPassword from "supertokens-node/recipe/thirdpartyemailpassword/index.js";
+import Dashboard from 'supertokens-node/recipe/dashboard/index.js'
 import {
   plugin,
   errorHandler,
@@ -48,6 +49,12 @@ async function auth(server, options) {
       Session.init(), // initializes session features
     ],
   });
+      Dashboard.init({
+        admins: [
+          'me@test.com'
+        ]
+      })
+    ]
   server.register(helmet, { contentSecurityPolicy: false })
 
   // we register a CORS route to allow requests from the frontend
