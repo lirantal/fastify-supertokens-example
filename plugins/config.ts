@@ -18,6 +18,10 @@ function configPlugin(server, options, done) {
       "SUPERTOKENS_3RD_PARTY_GITHUB_CLIENT_ID",
       "SUPERTOKENS_3RD_PARTY_GITHUB_CLIENT_SECRET",
       "CORS_ORIGIN_URL",
+      'SUPERTOKENS_3RD_PARTY_APPLE_CLIENT_ID',
+      'SUPERTOKENS_3RD_PARTY_APPLE_KEY_ID',
+      'SUPERTOKENS_3RD_PARTY_APPLE_PRIVATE_KEY',
+      'SUPERTOKENS_3RD_PARTY_APPLE_TEAM_ID',
     ],
     properties: {
       HTTP_PORT: {
@@ -60,6 +64,18 @@ function configPlugin(server, options, done) {
       },
       SUPERTOKENS_3RD_PARTY_GITHUB_CLIENT_SECRET: {
         type: "string",
+      },
+      SUPERTOKENS_3RD_PARTY_APPLE_CLIENT_ID: {
+        type: 'string'
+      },
+      SUPERTOKENS_3RD_PARTY_APPLE_KEY_ID: {
+        type: 'string'
+      },
+      SUPERTOKENS_3RD_PARTY_APPLE_PRIVATE_KEY: {
+        type: 'string'
+      },
+      SUPERTOKENS_3RD_PARTY_APPLE_TEAM_ID: {
+        type: 'string'
       },
       CORS_ORIGIN_URL: {
         type: "string",
