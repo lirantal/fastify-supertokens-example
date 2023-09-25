@@ -1,16 +1,18 @@
-import cors from "@fastify/cors";
-import formDataPlugin from "@fastify/formbody";
-import fastifyPlugin from "fastify-plugin";
+import cors from '@fastify/cors'
+import formDataPlugin from '@fastify/formbody'
+import helmet from '@fastify/helmet'
+import fastifyPlugin from 'fastify-plugin'
 
-import supertokens from "supertokens-node";
-import Session from "supertokens-node/recipe/session/index.js";
-import EmailPassword from "supertokens-node/recipe/emailpassword/index.js";
-import ThirdPartyEmailPassword from "supertokens-node/recipe/thirdpartyemailpassword/index.js";
+import supertokens from 'supertokens-node'
+import Session from 'supertokens-node/recipe/session/index.js'
 import Dashboard from 'supertokens-node/recipe/dashboard/index.js'
+
+import ThirdPartyEmailPassword from 'supertokens-node/recipe/thirdpartyemailpassword/index.js'
 import {
   plugin,
-  errorHandler,
-} from "supertokens-node/framework/fastify/index.js";
+  errorHandler
+} from 'supertokens-node/framework/fastify/index.js'
+import { type TypeInput } from 'supertokens-node/types'
 
 async function auth (server, options) {
   const config = {
@@ -88,15 +90,15 @@ async function auth (server, options) {
   // we register a CORS route to allow requests from the frontend
   server.register(cors, {
     origin: server.config.CORS_ORIGIN_URL,
-    allowedHeaders: ["Content-Type", ...supertokens.getAllCORSHeaders()],
-    methods: ["GET", "PUT", "POST", "DELETE"],
-    credentials: true,
-  });
+    allowedHeaders: ['content-type', ...supertokens.getAllCORSHeaders()],
+    methods: ['GET', 'PUT', 'POST', 'DELETE'],
+    credentials: true
+  })
+  server.register(formDataPlugin)
 
-  server.register(formDataPlugin);
-  server.register(plugin);
+  server.register(plugin)
 
-  server.setErrorHandler(errorHandler());
+  server.setErrorHandler(errorHandler())
 }
 
-export default fastifyPlugin(auth);
+export default fastifyPlugin(auth)
