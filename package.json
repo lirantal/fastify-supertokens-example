@@ -30,5 +30,9 @@
     "fastify-plugin": "^4.4.0",
     "supertokens-node": "^12.1.4"
   },
-  "private": true
+  "private": true,
+  "engines": {
+    "node": ">=24.0.0",
+    "npm": ">=11.10.0"
+  }
 }
